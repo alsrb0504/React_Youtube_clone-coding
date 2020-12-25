@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './app.css';
+import Header from './components/header';
 import VideoList from './components/video_list/video_list';
 
 function App(){
@@ -16,7 +17,12 @@ function App(){
       .then(result => setVideos(result.items))
       .catch(error => console.log('error', error));
   }, []);
-  return <VideoList videos={videos} />;
+  return (
+    <>
+      <Header />
+      <VideoList videos={videos} />;
+    </>
+  )
 }
 
 export default App;
