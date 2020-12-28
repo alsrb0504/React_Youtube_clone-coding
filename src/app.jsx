@@ -4,10 +4,6 @@ import SearchHeader from './components/search_header/search_header';
 import VideoDetail from './components/video_detail/video_detail';
 import VideoList from './components/video_list/video_list';
 
-
-// 검색 하면 항상 selectedVideo가 null로 다시 바뀌면 된다.
-// 그럴려면 SearchH
-
 const App = ({youtube}) => {
 
   const [videos, setVideos] = useState([]);
@@ -25,7 +21,6 @@ const App = ({youtube}) => {
         setSelectedVideo(null);
       });
   }
-
 
   useEffect(()=>{
     youtube //
